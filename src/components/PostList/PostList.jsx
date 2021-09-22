@@ -1,10 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import "./PostList.css";
 import { Link } from "react-router-dom";
 import { getPosts } from "../../services/GetPosts";
+import { ThemeContext } from "../../contexts/ThemeContext";
 
 export default function PostList() {
   const [posts, setPosts] = useState(null);
+
+  const context = useContext(ThemeContext)
 
   useEffect(() => {
     getPosts().then((response) => {

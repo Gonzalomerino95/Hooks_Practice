@@ -5,12 +5,17 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter as Router} from "react-router-dom"
 import 'bootstrap/dist/css/bootstrap.min.css';
+import ThemeContextProvider from "./contexts/ThemeContext.jsx"
+
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
-      <App />
-    </Router>
+    <ThemeContextProvider>
+      <Router>
+        <App />
+      </Router>
+    </ThemeContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

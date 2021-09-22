@@ -18,7 +18,7 @@ export default function PostDetails(){
             {post ? (<div>
             <h2>{post.title}</h2>
             <h4>{post.body}</h4>
-            </div>) : (<div>loading</div>)}
+            </div>) : (<div>Loading post details...</div>)}
             <Comments/>
         </div>
     )
